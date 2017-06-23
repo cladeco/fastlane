@@ -26,7 +26,8 @@ module Fastlane
         url_params << "scale=#{params[:scale]}"
         url_params << "launchUrl=#{params[:launch_url]}" if params[:launch_url]
         url_params << "language=#{params[:language]}" if params[:language]
-
+        url_params << "osVersion=#{params[:os_version]}" if params[:os_version]
+        
         return link + "?" + url_params.join("&")
       end
 
